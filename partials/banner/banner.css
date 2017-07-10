@@ -1,0 +1,56 @@
+header > .banner {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,175,0.25),
+		rgba(0,0,255,0.25),
+		rgba(0,200,255,0.25),
+		rgba(0,50,175,0.25)
+		), url(../../images/lg/banner.png),
+		url(../../images/sc.jpg);
+	background-position: center;
+	background-size: cover;
+	min-height: 30vh;
+}
+
+header > .banner > .row > .col-xs-2 > figure {
+	margin-top: 25px;
+}
+
+header > .banner > .row > .col-xs-2 > figure > img {
+	width: 100%;
+}
+
+header > .banner > .row > .col-xs-8 > h1 {
+	font-size: 0.65em;
+	text-shadow: 0 0 10px black;
+	text-align: center;
+	margin: 10px;
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	margin: 110px 0 10px 0;
+	padding: 10px 0 10px 0;
+}
+
+header > .navbar {
+	margin-bottom: 0;
+}
+
+header > .navbar > .container-fluid > .navbar-header > .navbar-brand,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .dropdown > a,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > li > .logout {
+	color: white;
+}
+
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:link,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:visited,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:hover,
+header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:active {
+	color: #9d9d9d;
+	
+}

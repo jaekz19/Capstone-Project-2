@@ -1,0 +1,374 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+}
+
+header > .banner > .row {
+	background: linear-gradient(to bottom right,
+		rgba(255,255,0,0.5),
+		rgba(255,255,255,0.5),
+		rgba(255,276,88,0.5),
+		rgba(255,176,0,0.5)
+		), url(../images/lg/banner.png);
+	min-height: 30vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/*xs*/
+header > .banner > .row > .col-xs-2 > figure {
+	margin: 25px 0 0 0;
+}
+
+header > .banner > .row > .col-xs-2 > figure > img {
+	width: 100%;
+}
+
+header > .banner > .row > .col-xs-8 > h1 {
+	font-size: 0.7em;
+	color: white;
+	text-shadow: 0 0 10px black;
+	text-align: center;
+	margin: 10px;
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(0,0,0));
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	margin: 110px 10px 0 10px;
+	padding: 10px 0 10px 0;
+}
+
+content > .loginpart {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,0,0.5),
+		rgba(49,67,115,0.5),
+		rgba(36,88,255,0.5),
+		rgba(0,0,0,0.5)
+		), url(../images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+content > .loginpart .col-xs-8 > form > h1,h3,h5 {
+	color: white;
+}
+
+content > .loginpart .col-xs-8 > form > h1 {
+	font-size: 1em;
+	text-align: center;
+	text-shadow: 0 0 10px black;
+}
+
+content > .loginpart .col-xs-8 > form > h3 {
+	font-size: 0.5em;
+	text-align: center;
+	text-shadow: 0 0 10px black;
+}
+
+content > .loginpart .col-xs-8 > form > h5 {
+	font-size: 0.5em;
+	text-shadow: 0 0 10px black;
+	margin-bottom: 0;
+}
+
+content > .loginpart .col-xs-8 > form > .log, .reg {
+	font-size: 0.5em;
+	border-radius: 10px;
+}
+
+content > .loginpart .col-xs-8 > form > .inputsize {
+	width: 100%;
+	font-size: 0.5em;
+}
+
+content > .loginpart .col-xs-8 > form {
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(0,0,0));
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 0 0 10px black;
+}
+
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+	header > .banner > .row > .col-xs-2 > figure {
+		margin: 25px 0 0 0;
+	}
+
+	header > .banner > .row > .col-xs-2 > figure > img {
+		width: 100%;
+	}
+
+	header > .banner > .row > .col-xs-8 > h1 {
+		font-size: 1em;
+		color: white;
+		text-shadow: 0 0 10px black;
+		text-align: center;
+		margin: 10px;
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		box-shadow: 0 0 10px black;
+		margin: 200px 110px 60px 110px;
+		padding: 20px 0 20px 0;
+	}
+
+	content > .loginpart {
+		background: linear-gradient(to bottom right,
+			rgba(0,0,0,0.5),
+			rgba(49,67,115,0.5),
+			rgba(36,88,255,0.5),
+			rgba(0,0,0,0.5)
+			), url(../images/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1,h3,h5 {
+		color: white;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1 {
+		font-size: 2em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h3 {
+		font-size: 1em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h5 {
+		font-size: 1em;
+		text-shadow: 0 0 10px black;
+		margin-bottom: 0;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log, .reg {
+		font-size: 1em;
+		border-radius: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .inputsize {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	content > .loginpart .col-xs-8 > form > input ~ input {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form {
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		padding: 20px;
+		margin: 100px 70px 100px 70px;
+		box-shadow: 0 0 10px black;
+	}
+}
+
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	header > .banner > .row > .col-xs-2 > figure {
+		margin: 25px 0 0 0;
+		width: 80%;
+	}
+
+	header > .banner > .row > .col-xs-2 > figure > img {
+		width: 100%;
+	}
+
+	header > .banner > .row > .col-xs-8 > h1 {
+		font-size: 1em;
+		color: white;
+		text-shadow: 0 0 10px black;
+		text-align: center;
+		margin: 10px;
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		box-shadow: 0 0 10px black;
+		margin: 250px 170px 60px 170px;
+		padding: 20px 0 20px 0;
+	}
+
+	content > .loginpart {
+		background: linear-gradient(to bottom right,
+			rgba(0,0,0,0.5),
+			rgba(49,67,115,0.5),
+			rgba(36,88,255,0.5),
+			rgba(0,0,0,0.5)
+			), url(../images/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1,h3,h5 {
+		color: white;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1 {
+		font-size: 2em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h3 {
+		font-size: 1em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h5 {
+		font-size: 1em;
+		text-shadow: 0 0 10px black;
+		margin-bottom: 0;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log, .reg {
+		font-size: 1em;
+		border-radius: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .inputsize {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	content > .loginpart .col-xs-8 > form > input ~ input {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form {
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		padding: 20px;
+		margin: 190px 130px 190px 130px;
+		box-shadow: 0 0 10px black;
+	}
+
+}
+
+
+/*lg*/
+@media (min-width: 1200px) {
+	header > .banner > .row > .col-xs-2 > figure {
+		margin: 25px 0 0 0;
+		width: 70%;
+	}
+
+	header > .banner > .row > .col-xs-2 > figure > img {
+		width: 100%;
+	}
+
+	header > .banner > .row > .col-xs-8 > h1 {
+		font-size: 2em;
+		color: white;
+		text-shadow: 0 0 10px black;
+		text-align: center;
+		margin: 10px;
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		box-shadow: 0 0 10px black;
+		margin: 400px 200px 60px 200px;
+		padding: 20px 0 20px 0;
+	}
+
+	content > .loginpart {
+		background: linear-gradient(to bottom right,
+			rgba(0,0,0,0.5),
+			rgba(49,67,115,0.5),
+			rgba(36,88,255,0.5),
+			rgba(0,0,0,0.5)
+			), url(../images/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1,h3,h5 {
+		color: white;
+	}
+
+	content > .loginpart .col-xs-8 > form > h1 {
+		font-size: 5em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h3 {
+		font-size: 2.5em;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+	}
+
+	content > .loginpart .col-xs-8 > form > h5 {
+		font-size: 1.5em;
+		text-shadow: 0 0 10px black;
+		margin-bottom: 0;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log, .reg {
+		font-size: 1.5em;
+		border-radius: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .log {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form > .inputsize {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	content > .loginpart .col-xs-8 > form > input ~ input {
+		margin-bottom: 10px;
+	}
+
+	content > .loginpart .col-xs-8 > form {
+		background: linear-gradient(
+			rgb(34,34,230),
+			rgb(0,0,0));
+		border: 2px solid white;
+		border-radius: 10px;
+		padding: 20px;
+		margin: 300px 70px 300px 70px;
+		box-shadow: 0 0 10px black;
+	}
+
+}

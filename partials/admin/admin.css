@@ -1,0 +1,117 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+
+header > .banner {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,175,0.25),
+		rgba(0,0,255,0.25),
+		rgba(0,200,255,0.25),
+		rgba(0,50,175,0.25)
+		), url(../../images/lg/banner.png),
+		url(../../images/sc.jpg);
+	background-position: center;
+	background-size: cover;
+	min-height: 30vh;
+}
+
+header > .banner > .row > .col-xs-2 > figure {
+	margin-top: 25px;
+}
+
+header > .banner > .row > .col-xs-2 > figure > img {
+	width: 100%;
+}
+
+header > .banner > .row > .col-xs-8 > h1 {
+	font-size: 0.65em;
+	text-shadow: 0 0 10px black;
+	text-align: center;
+	margin: 10px;
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	margin: 110px 0 10px 0;
+	padding: 10px 0 10px 0;
+}
+
+header > .navbar {
+	margin-bottom: 0;
+}
+
+header > .navbar .navbar-header > a,
+header > .navbar .collapse > .navbar-right > li > a {
+	color: white;
+}
+
+content > .users {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,0,0.5),
+		rgba(41,20,71,0.5),
+		rgba(19,20,42,0.5),
+		rgba(0,0,0,0.5)
+		), url(../../images/bgmenu.png),
+		url(../../images/bgmenu2.jpg);
+	min-height: 30vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+content > .users > .row > .col-xs-12 > .user-content {
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	margin: 5px;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > h1 {
+	font-size: 0.8em;
+	text-align: center;
+	text-shadow: 0 0 10px black;
+	margin: 5px 0 10px 0;
+	border-bottom: 2px solid white;
+	padding: 10px;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .item-content {
+	margin: 5px;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .item-content > .col-xs-6 > figure {
+	width: 20%;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .item-content > .col-xs-6 > figure > img {
+	width: 100%;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .item-content > .col-xs-6 > h6,
+content > .users > .row > .col-xs-12 > .user-content > .item-content > .col-xs-6 > figure > figcaption {
+	font-size: 0.5em;
+	text-shadow: 0 0 10px black;
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .modal > .modal-content {
+	background: linear-gradient(
+		rgba(255,255,255,0.95),
+		rgba(44,176,88,0.95),
+		rgba(44,88,176,0.95),
+		rgba(255,255,255,0.95));
+}
+
+content > .users > .row > .col-xs-12 > .user-content > .modal > .modal-content > .modal-header > h1 {
+	font-size: 1em;
+	text-shadow: 0 0 10px black;
+}

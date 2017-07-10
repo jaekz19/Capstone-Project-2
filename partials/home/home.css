@@ -1,0 +1,132 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+
+content > .items {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,0,0.5),
+		rgba(41,20,71,0.5),
+		rgba(19,20,42,0.5),
+		rgba(0,0,0,0.5)
+		), url(../../images/bgmenu.png),
+		url(../../images/bgmenu2.jpg);
+	min-height: 30vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+content > .items > .row > .message > .container {
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	margin: 10px;
+	box-shadow: 0 0 10px black;
+}
+
+content > .items > .row > .message > .container > h1 {
+	font-size: 0.7em;
+	text-shadow: 0 0 10px black;
+}
+
+content > .items > .row > .message > .container > h3 {
+	font-size: 0.55em;
+	text-shadow: 0 0 10px black;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion {
+	background: linear-gradient(
+		rgb(114,85,198),
+		rgb(70,47,138),
+		rgb(114,85,198));
+	width: 100%;
+	text-align: left;
+	border: none;
+	transition: 0.4s;
+	font-size: 0.8em;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion:hover {
+	background: linear-gradient(
+		rgb(0,0,0),
+		rgb(79,61,131),
+		rgb(0,0,0));
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion > .glyphicon {
+	float: right;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content {
+	background: linear-gradient(to bottom right,
+		rgba(75,59,0,0.8),
+		rgba(51,0,84,0.8),
+		rgba(151,38,255,0.8),
+		rgba(201,32,6,0.8));
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	font-size: 0.6em;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > figure {
+	width: 20%;
+	padding: 10px;
+	float: left;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > figure > img {
+	width: 100%;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-6 {
+	padding: 10px;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 {
+	padding: 10px;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .single {
+	color: rgb(85,85,85);
+	border-radius: 10px;
+	margin: 5px;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content {
+	background: linear-gradient(
+		rgba(255,255,255,0.95),
+		rgba(44,176,88,0.95),
+		rgba(44,88,176,0.95),
+		rgba(255,255,255,0.95));
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header,
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body {
+	text-shadow: 0 0 10px black;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header {
+	padding-left: 0;
+	padding-right: 0;
+	border-bottom: none;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header > .modal-header > span {
+	width: 10%;
+	float: right;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header > .modal-header > span > img {
+	width: 100%;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body > form > .counter {
+	color: black;
+}
+
