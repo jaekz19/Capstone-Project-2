@@ -20,9 +20,9 @@
 
 <body>
 
-  <audio autoplay="autoplay" loop="loop">
+  <!-- <audio autoplay="autoplay" loop="loop">
     <source src="final.mp3" type="audio/mpeg">
-  </audio>
+  </audio> -->
 
   <?php echo display_banner(); ?>
   <?php echo display_content(); ?>

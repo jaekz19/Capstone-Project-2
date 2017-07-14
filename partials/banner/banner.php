@@ -28,17 +28,17 @@ echo "
 			</div>
 			<div class='collapse navbar-collapse' id='mynav'>
 				<ul class='nav navbar-nav'>
-					<li><a href='#'>Buy Items</a></li>
-					<li><a href='#'>About</a></li>
+					<li><a href='../home/home.php'>Buy Items</a></li>
+					<li><a href='#'>Fight!</a></li>
 				</ul>
 				<ul class='nav navbar-nav navbar-right'>
-					<li class='gil'><a>Gil:</a></li>
 					<li class='dropdown'>
 						<a class='dropdown-toggle' data-toggle='dropdown' href='#'>
 							<span class='glyphicon glyphicon-user'></span>".ucfirst($_SESSION['user'])."<span class='caret'></span>
 						</a>
 						<ul class='dropdown-menu'>
-							<li><a href='#'>My Items</a></li>
+							<li><a href='../home/myitems.php'>My Items</a></li>
+							<li><a href='../home/changepassword.php'>Change Password</a></li>
 						</ul>
 					</li>
 					<li><a href='../logout.php' class='logout'><span class='glyphicon glyphicon-log-out'></span>Log Out</a></li>

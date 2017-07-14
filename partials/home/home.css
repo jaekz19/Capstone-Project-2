@@ -92,9 +92,7 @@ content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .
 	padding: 10px;
 }
 
-content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .single {
-	color: rgb(85,85,85);
-	border-radius: 10px;
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .btn {
 	margin: 5px;
 }
 
@@ -107,8 +105,14 @@ content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .
 }
 
 content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header,
-content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body {
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body,
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-footer > .col-xs-6 {
 	text-shadow: 0 0 10px black;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-footer > .col-xs-6 {
+	text-align: center;
+	padding: 0;
 }
 
 content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-header {
@@ -126,7 +130,11 @@ content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .
 	width: 100%;
 }
 
-content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body > form > .counter {
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body > h6 {
+	margin-top: 0;
+}
+
+content > .items > .row > .col-xs-12 > .container-fluid > .accordion-content > .col-xs-3 > .modal > .modal-dialog > .modal-content > .modal-body > .counter {
 	color: black;
 }
 

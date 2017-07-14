@@ -1,0 +1,90 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+
+content > .itemsown {
+	background: linear-gradient(to bottom right,
+		rgba(0,0,0,0.5),
+		rgba(41,20,71,0.5),
+		rgba(19,20,42,0.5),
+		rgba(0,0,0,0.5)
+		), url(../../images/bgmenu.png),
+		url(../../images/bgmenu2.jpg);
+	min-height: 30vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+content > .itemsown > .row > .message > .container {
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	margin: 10px;
+	box-shadow: 0 0 10px black;
+}
+
+content > .itemsown > .row > .message > .container > h6,
+content > .itemsown > .row > .message > .container > h5 {
+	text-align: center;
+	text-shadow: 0 0 10px black;
+}
+
+content > .itemsown > .row > .items > .container {
+	background: linear-gradient(
+		rgb(34,34,230),
+		rgb(34,34,176),
+		rgb(0,0,128),
+		rgb(0,0,32));
+	border: 2px solid white;
+	border-radius: 10px;
+	margin: 5px;
+	box-shadow: 0 0 10px black;
+	min-height: 190px;
+}
+
+content > .itemsown > .row > .items > .container > h6,
+content > .itemsown > .row > .items > .container > .description > h6 {
+	font-size: 0.5em;
+	text-shadow: 0 0 10px black;
+	text-align: center;
+}
+
+content > .itemsown > .row > .items > .container > .description > h6 {
+	vertical-align: middle;
+}
+
+content > .itemsown > .row > .items > .container > figure {
+	width: 30%;
+	margin: 0 auto;
+}
+
+content > .itemsown > .row > .items > .container > figure > img {
+	width: 100%;
+}
+
+content > .itemsown > .row > .items > .container > button {
+	margin-top: 5px;
+	font-size: 0.7em;
+}
+
+content > .itemsown > .row > .modal .modal-content {
+	background: linear-gradient(
+		rgba(255,255,255,0.95),
+		rgba(44,176,88,0.95),
+		rgba(44,88,176,0.95),
+		rgba(255,255,255,0.95));
+}
+
+content > .itemsown > .row > .modal .modal-content > .modal-body > input {
+	color: black;
+}
+
+content > .itemsown > .row > .modal .modal-content {
+	text-shadow: 0 0 10px black;
+}

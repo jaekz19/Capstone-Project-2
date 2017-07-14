@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" type="text/css" href="../banner/banner.css">
 
-  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" type="text/css" href="<?php get_css(); ?>">
 
   <link rel="stylesheet" type="text/css" href="../footer/footer_design.css">
 

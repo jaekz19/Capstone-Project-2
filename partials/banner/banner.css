@@ -45,12 +45,3 @@ header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .dropdo
 header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > li > .logout {
 	color: white;
 }
-
-header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil,
-header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:link,
-header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:visited,
-header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:hover,
-header > .navbar > .container-fluid > .navbar-collapse > .navbar-right > .gil:active {
-	color: #9d9d9d;
-	
-}

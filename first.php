@@ -55,6 +55,7 @@ function display_content() {
 
 if(isset($_POST['login'])) {
 	$username = $_POST['username'];
+	$username = strtolower($username);
 	$password = sha1($_POST['password']);
 	$sql = "select * from user where username='$username' and password='$password'";
 	$result = mysqli_query($connect,$sql);
@@ -65,6 +66,7 @@ if(isset($_POST['login'])) {
 			$user = $rows['username'];
 			$pass = $rows['password'];
 			$role = $rows['role'];
+			$gil = $rows['gil'];
 
 			if($username == $user && $role == 'admin' && $password == $pass) {
 				$_SESSION['userid'] = $id;
@@ -73,6 +75,7 @@ if(isset($_POST['login'])) {
 			} else if ($username == $user && $password == $pass) {
 				$_SESSION['userid'] = $id;
 				$_SESSION['user'] = $username;
+				$_SESSION['gil'] = $gil;
 				header('location:partials/home/home.php');
 			} else {
 				$_SESSION['message'] = "Log in Failed.";
@@ -83,6 +86,7 @@ if(isset($_POST['login'])) {
 
 if(isset($_POST['register'])) {
 	$username = $_POST['reguser'];
+	$username = strtolower($username);
 	$password = $_POST['regpass'];
 	$confirm = $_POST['confirmpass'];
 	$query = "select * from user where username='$username'";
@@ -99,8 +103,8 @@ if(isset($_POST['register'])) {
 		$_SESSION['message'] = "Please enter Password.";
 	} else if ($password == $confirm && $result == 0) {
 		$password = sha1($password);
-		$sql = "insert into user (username,password,role)
-				values('$username','$password','user')";
+		$sql = "insert into user (username,password,gil,role)
+				values('$username','$password',9999,'user')";
 		mysqli_query($connect,$sql);
 		$_SESSION['message'] = "Register Successful!";
 	}

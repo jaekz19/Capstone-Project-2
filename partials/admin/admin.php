@@ -53,26 +53,29 @@ function display_content() {
 	<div class='container-fluid users'>
 		<div class='row'>";
 
-	$sql = "select distinct user.id, items.name, items.image, user.username, user_items.quantity from user_items join items on (items.id = user_items.items_id) join user on (user.id = user_items.user_id) group by username";
+	$sql = "select * from user where role='user'";
 	$query = mysqli_query($GLOBALS['connect'],$sql);
 
 	foreach ($query as $key) {
 		echo "
 			<div class='col-xs-12'>
 				<div class='user-content row'>
-					<h1>User:".ucfirst($key['username'])."
+					<h1 class='user'>User:".ucfirst($key['username'])."
 						<span><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#modal".$key['id']."'>Delete</button></span>
 					</h1>
+					<h1 class='gil'>Current Gil: ".$key['gil']."</h1>
 					<div id='modal".$key['id']."' class='modal fade' role='dialog'>
-						<div class='modal-content'>
-							<div class='modal-header'>
-								<h1 class='modal-title'>Are you sure you want to delete this account?</h1>
-							</div>
-							<div class='modal-footer'>
-								<form method='POST' action='admin.php?id=".$key['id']."' class='col-xs-6'>
-									<input type='submit' name='delete' class='btn btn-danger' value='Delete?'>
-								</form> 
-								<button type='button' class='btn btn-warning col-xs-6' data-dismiss='modal'>Cancel</button>
+						<div class='modal-dialog modal-sm'>
+							<div class='modal-content'>
+								<div class='modal-header'>
+									<h1 class='modal-title'>Are you sure you want to delete this account?</h1>
+								</div>
+								<div class='modal-footer'>
+									<form method='POST' action='admin.php?id=".$key['id']."' class='col-xs-6'>
+										<input type='submit' name='delete' class='btn btn-danger' value='Delete?'>
+									</form> 
+									<button type='button' class='btn btn-warning' data-dismiss='modal'>Cancel</button>
+								</div>
 							</div>
 						</div>
 					</div>

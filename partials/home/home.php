@@ -4,8 +4,11 @@ session_start();
 
 $_SESSION['message'] = "";
 $_SESSION['itemsown'] = "";
-
 require('../../connection.php');
+
+function get_css() {
+	echo "home.css";
+}
 
 function get_title() {
 	echo "Greetings!";
@@ -20,6 +23,8 @@ function display_content() {
 					<div class='container'>
 						<h1>Greetings Adventurers!</h1>
 						<h3>Don't forget to buy what you need before your journey.</h3>
+						<br>
+						<h5 id='gil'></h5>
 					</div>
 				</div>";
 
@@ -47,8 +52,8 @@ function display_content() {
 								<p>$price Gil</p>
 							</div>
 							<div class='col-xs-3'>
-								<input type='button' class='single' id='buy' value='Buy' data-toggle='modal' data-target='#modal$id' onclick='itemown('buy');'>
-								<input type='submit' class='single' id='max' value='Max' data-toggle='modal' data-target='#max$id'>
+								<input type='button' class='btn btn-success' name='$id' value='Buy' data-toggle='modal' data-target='#modal$id' onclick='quantitycheck(this.name);'>
+								<input type='button' class='btn btn-info' name='$id' value='Max' data-toggle='modal' data-target='#max$id' onclick='quantitycheck(this.name);'>
 								<div id='modal$id' role='dialog' class='modal fade'>
 									<div class='modal-dialog modal-sm'>
 										<div class='modal-content'>
@@ -57,19 +62,18 @@ function display_content() {
 													$name
 													<span><img src='$img'></span>
 												</h4>
-												<p>".$_SESSION['message']."</p>
 											</div>
 											<div class='modal-body'>
 												<p>$des</p>
 												<p>$price Gil</p>
-												<form method='POST' action='home.php?id=$id' id='buyform$id'>
-													<input type='number' name='counter' min='0' max='99' class='counter'>/99
-													<input type='submit' name='buy' value='Buy' class='btn btn-success'>
-												</form>
+												<input type='number' name='counter' id='counter$id' min='0' max='99' class='counter'>/99
+												<input type='button' id='$id' value='Buy' class='btn btn-success' onclick='buybtn(this.id); quantitycheck(this.id);'>
 												<br>
-												<p>You own: ".$_SESSION['itemsown']."/99</p>
+												<br>
+												<p class='itemsown$id'></p>
 											</div>
 											<div class='modal-footer'>
+												<p class='col-xs-6 message$id'></p>
 												<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>
 											</div>
 										</div>
@@ -88,11 +92,11 @@ function display_content() {
 												<p>$des</p>
 												<p>$price Gil</p>
 												<p>Do you wanna max out the item?</p>
-												<form method='POST' action='home.php?id=$id'>
-													<input type='submit' class='btn btn-success' value='Buy All' name='max'>
-												</form>
+												<p class='itemsown$id'></p>
+												<input type='button' class='btn btn-success' value='Buy All' id='$id' onclick='maxbtn(this.id); quantitycheck(this.id);'>
 											</div>
 											<div class='modal-footer'>
+												<p class='col-xs-6 message$id'></p>
 												<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>
 											</div>
 										</div>
@@ -118,41 +122,6 @@ if(!isset($_SESSION['user'])) {
 	header('location:../../first.php');
 }
 
-if(isset($_POST['buy'])) {
-	$userid = $_SESSION['userid'];
-	$id = $_GET['id'];
-	$input = $_POST['counter'];
-
-	$itemcheck = "select * from user_items where user_id='$userid' and items_id='$id'";
-	$initialresult = mysqli_query($connect,$itemcheck);
-	$finalresult = mysqli_fetch_assoc($initialresult);
-
-	$quantitycheck = "select quantity from user_items where user_id='$userid' and items_id='$id'";
-	$quantitycheckquery = mysqli_query($connect,$quantitycheck);
-	$quantitycheckresult = mysqli_fetch_assoc($quantitycheckquery);
-
-	if($finalresult >= 1) {
-		foreach ($quantitycheckresult as $key) {
-			if($key += $input <= 99){
-				$update = "update user_items set quantity=$key + $input where user_id='$userid' and items_id='$id'";
-				mysqli_query($connect,$update);
-			} else if ($key += $input >= 100) {
-				$_SESSION['message'] = "Exceed carry limit!";
-			}
-		}
-	} else if($finalresult == 0) {
-		$insert = "insert into user_items(user_id,items_id,quantity)
-					values('$userid','$id','$input')";
-		mysqli_query($connect,$insert);
-	}
-}
-
-// if(isset($_POST['max'])) {
-// 	$userid = $_SESSION['userid'];
-// 	$id = $_GET['id'];
-// 	$sql = ""
-// }
-
 require_once('../main_template.php');
 ?>
 
@@ -176,29 +145,45 @@ require_once('../main_template.php');
 		$(this).find('.glyphicon').toggleClass('glyphicon-minus');
 	});
 
-	$(document).ready(function() {
-		$("#buy").click(function() {
-			var quantity = $('#modal'+id).val();
+	function quantitycheck(id) {
+		$.post("quantitycheck.php",
+	    {
+	        id: id
+	    },
+	    function(data, status){
+	        $('.itemsown'+id).html('You own: '+ data +'/99');
+	    });
+	};
 
-			$.post("showitemsown.php?id="+id,
-			{
-				quantity: quantity
-			},
-			function(data, status) {
-				alert(data);
-			});
+	function buybtn(id) {
+		var counter = $('#counter'+id).val();
+		$.post("buy.php",
+		{
+			id: id,
+			counter: counter
+		},
+		function(data, status){
+			$('.message'+id).html(data);
 		});
-	});
+	};
 
-	// function itemown(id) {
-	// 	var quantity = $('#modal'+id).val();
-	// 	$.post("showitemsown.php?id="+id,
-	// 	{
-	// 		quantity: quantity
-	// 	},
-	// 	function(data) {
-	// 		alert(data);
-	// 	});
-	// }
+	function maxbtn(id) {
+		$.post("max.php",
+		{
+			id: id
+		},
+		function(data, status){
+			$('.message'+id).html(data);
+		});
+	};
+
+	function update() {
+		$.post("checkgil.php",
+			function(data, status){
+				$('#gil').html('Your Gil: '+data);
+			});
+	};
+
+	self.setInterval(update, 1000);
 	
 </script>
