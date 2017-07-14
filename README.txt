@@ -1,6 +1,7 @@
 Hello and thank you for viewing "Chocobo Hut"
 
-A E-commerce website based on the famous fantasy game.
+An E-commerce website based on the famous fantasy game.
+The developer aims only for mobile view to simulate apps, hence the broken view on certain screen sizes.
 Please note that this is purely for educational purposes and All Rights goes to the original Creators/Owners.
 
 Guest Credential:
@@ -22,4 +23,3 @@ Password: 1234
 Admin Credential:
 Username: admin
 Password: secret
-
