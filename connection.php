@@ -1,11 +1,9 @@
 <?php
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+$host = "etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "vpoh4cg43jla3kby";
+$password = "s9datg14khuj2lds";
+$database = "iwcixxdeeyabkwal";
 
 $connect = mysqli_connect($host,$username,$password,$database);
 
